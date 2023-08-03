@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="Meal Planner:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/Meal_Planner_jar</output-path>
+    <root id="archive" name="Meal Planner.jar">
+      <element id="directory" name="META-INF">
+        <element id="file-copy" path="$PROJECT_DIR$/META-INF/MANIFEST.MF" />
+      </element>
+      <element id="module-output" name="Meal Planner" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/../../../../../../../../Program Files (x86)/PostgreSQL/pgJDBC/postgresql-42.5.1.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/Meal Planner/.idea/dataSources/56480676-90cd-42ef-a624-9b27a57ada24/storage_v2/_src_/database/meals_db.DTJjxQ/schema/pg_catalog.0S1ZNQ.zip" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/Meal Planner/.idea/dataSources/56480676-90cd-42ef-a624-9b27a57ada24/storage_v2/_src_/database/meals_db.DTJjxQ/schema/information_schema.FNRwLQ.zip" path-in-jar="/" />
+    </root>
+  </artifact>
+</component>
