@@ -3,7 +3,6 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class MealDao {
-//    private static ArrayList<Meal> meals = new ArrayList<>();
 
     public static Connection getConnection() throws SQLException {
         String DB_URL = "jdbc:postgresql://localhost:5432/meals_db";
@@ -16,7 +15,7 @@ public class MealDao {
 
     public static void initialize_database() {
         try (Connection connection = getConnection()) {
-            System.out.println("Connected to the PostgresSQL server successfully.");
+//            System.out.println("Connected to the PostgresSQL server successfully.");
 
             Statement statement = connection.createStatement();
             statement.executeUpdate("drop table if exists meals");
@@ -67,8 +66,35 @@ public class MealDao {
         }
     }
 
-    public static void addMeal(ArrayList<Meal> meals) {
-        Scanner scanner = new Scanner(System.in);
+    public static ArrayList<Meal> load_database(String category) {
+        ArrayList<Meal> meals = new ArrayList<>();
+        try (Connection connection = getConnection()) {
+            Statement statement = connection.createStatement();
+            ResultSet mealSet = statement.executeQuery("select * from meals where category = '" + category + "'");
+
+            while (mealSet.next()) {
+//                String category = mealSet.getString("category");
+                String meal = mealSet.getString("meal");
+                int meal_id = mealSet.getInt("meal_id");
+
+                PreparedStatement ps = connection.prepareStatement("select ingredient from ingredients where meal_id = ?");
+                ps.setInt(1, meal_id);
+                ResultSet ingredientSet = ps.executeQuery();
+                while (ingredientSet.next()) {
+                    String ingredients = ingredientSet.getString("ingredient");
+                    Meal newMeal = new Meal(category, meal, ingredients);
+                    meals.add(newMeal);
+                }
+            }
+            return meals;
+
+        } catch (SQLException ex) {
+            ex.printStackTrace();
+            throw new RuntimeException(ex);
+        }
+    }
+
+    public static void addMeal(Scanner scanner) {
         String category;
 
         System.out.println("Which meal do you want to add (breakfast, lunch, dinner)?");
@@ -153,14 +179,31 @@ public class MealDao {
         System.out.println("The meal has been added!");
     }
 
-    public static void showMeal(ArrayList<Meal> meals) {
-        for (Meal meal : meals) {
-            System.out.printf("%nCategory: %s%nName: %s%nIngredients:%n", meal.getCategory(), meal.getName());
+    public static void showMeal(ArrayList<Meal> meals, Scanner scanner) {
+        System.out.println("Which category do you want to print (breakfast, lunch, dinner)?");
+        String category;
+        while (true) {
+            category = scanner.nextLine();
+            if (category.equals("breakfast") || category.equals("lunch") || category.equals("dinner")) {
+                break;
+            } else System.out.println("Wrong meal category! Choose from: breakfast, lunch, dinner.");
+        }
+
+        ArrayList<Meal> mealsFromDB = load_database(category);
+
+        if(mealsFromDB.isEmpty()) {
+            System.out.println("No meals found.");
+            return;
+        }
+        System.out.printf("Category: %s%n", category);
+        for (Meal meal : mealsFromDB) {
+            System.out.printf("%nName: %s%nIngredients:%n", meal.getName());
             String[] ingredientsArray = meal.getIngredientsArray();
             for (String ingredient : ingredientsArray) {
                 System.out.println(ingredient);
             }
         }
+
         System.out.println();
     }
 }

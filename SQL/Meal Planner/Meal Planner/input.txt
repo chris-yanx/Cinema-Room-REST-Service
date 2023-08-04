@@ -1,0 +1,13 @@
+show
+show
+add
+lunch
+dessert
+cake,cookie
+add
+lunch
+sushi
+rice,salmon
+show
+lunch
+exit
