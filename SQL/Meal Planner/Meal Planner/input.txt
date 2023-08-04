@@ -10,4 +10,3 @@ sushi
 rice,salmon
 show
 lunch
-exit
