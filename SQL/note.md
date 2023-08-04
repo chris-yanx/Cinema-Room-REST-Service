@@ -23,17 +23,17 @@ ORDER BY [list_of_columns/aliases];
 ### Distinct
 `SELECT DISTINCT` syntax to see only the unique values in a specific column. 
 
-`
+```
 SELECT DISTINCT month
 FROM tutorial.aapl_historical_stock_price
-`
+```
 
 To include two (or more) columns in a SELECT DISTINCT clause, results will contain all of the unique pairs of those two columns:
 
-`
+```
 SELECT DISTINCT year, month
 FROM tutorial.aapl_historical_stock_price
-`
+```
 
 
 
