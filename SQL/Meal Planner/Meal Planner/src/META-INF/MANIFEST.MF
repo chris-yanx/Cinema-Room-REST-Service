@@ -1,5 +1,0 @@
-Manifest-Version: 1.0
-Main-Class: Main
-Class-Path: postgresql-42.5.1.jar pg_catalog.0S1ZNQ.zip information_sche
- ma.FNRwLQ.zip
-
