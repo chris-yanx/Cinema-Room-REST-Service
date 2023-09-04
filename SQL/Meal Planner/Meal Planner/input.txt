@@ -1,12 +1,23 @@
-show
-show
-add
-lunch
-dessert
-cake,cookie
-add
-lunch
+plan
+yogurt
+tomato salad
+ramen
+oatmeal
+wraps
+ramen
+sandwich
+avocado egg salad
+pesto chicken
+oatmeal
+chicken salad
+tomato soup
+yogurt
 sushi
-rice,salmon
-show
-lunch
+pizza
+scrambled eggs
+wraps
+pesto chicken
+scrambled eggs
+tomato salad
+beef with broccoli
+exit

@@ -5,11 +5,11 @@ public class Main {
     public static ArrayList<Meal> meals = new ArrayList<>();
 
     public static void main(String[] args) {
-        MealDao.initialize_database();
+//        MealDao.initialize_database();
         Scanner scanner = new Scanner(System.in);
         while (true) {
             meals = MealDao.load_database();
-            System.out.println("What would you like to do (add, show, exit)?");
+            System.out.println("What would you like to do (add, show, plan, exit)?");
             String option = scanner.nextLine();
             switch (option) {
                 case "add" -> MealDao.addMeal(scanner);
@@ -18,8 +18,9 @@ public class Main {
                         System.out.println("No meals saved. Add a meal first.");
                         continue;
                     }
-                    MealDao.showMeal(meals, scanner);
+                    MealDao.showMeal(scanner);
                 }
+                case "plan" -> MealDao.planMeal(meals,scanner);
                 case "exit" -> {
                     System.out.println("Bye!");
                     return;

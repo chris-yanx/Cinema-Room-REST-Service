@@ -1,0 +1,57 @@
+add
+breakfast
+oatmeal
+oats, milk, honey, raisins, cinnamon
+add
+breakfast
+sandwich
+bread, turkey, lettuce, tomato, mayo
+add
+breakfast
+scrambled eggs
+eggs, milk, butter, salt, pepper
+add
+breakfast
+yogurt
+yogurt, granola, honey, blueberries, strawberries
+add
+lunch
+avocado egg salad
+avocado, eggs, mayonnaise, lemon juice, salt, pepper
+add
+lunch
+chicken salad
+chicken breast, lettuce, tomatoes, cucumber, olive oil, vinegar
+add
+lunch
+sushi
+sushi rice, nori, raw fish, cucumber, avocado, soy sauce
+add
+lunch
+tomato salad
+tomatoes, mozzarella cheese, basil, olive oil, balsamic vinegar
+add
+lunch
+wraps
+tortilla, grilled chicken, lettuce, tomatoes, onion, avocado, sour cream
+add
+dinner
+beef with broccoli
+beef, broccoli, garlic, soy sauce, oyster sauce, cornstarch, oil
+add
+dinner
+pesto chicken
+chicken breast, pesto sauce, olive oil, salt, pepper
+add
+dinner
+pizza
+pizza dough, tomato sauce, mozzarella cheese
+add
+dinner
+ramen
+ramen noodles, broth, soy sauce, miso paste, pork, green onions, boiled egg
+add
+dinner
+tomato soup
+tomatoes, onion, garlic, vegetable broth, olive oil, salt, pepper
+exit
