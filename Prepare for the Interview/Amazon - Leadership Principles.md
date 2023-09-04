@@ -53,6 +53,9 @@ Leaders have relentlessly high standards.
 
 ### Think big
 - When asked for an idea, don't say the first small idea which pops in your head, and believe you’ve satisfied the requirement.
-- 
+- Somewhat impossible ideas might be preferred, and bold vision is encouraged.
+
+### Bias for Action
+Speed matters in business, we value calculated risk-taking.
 
 
