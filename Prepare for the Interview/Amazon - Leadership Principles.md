@@ -46,4 +46,13 @@ Leaders recognize talented people and train them.
 **? It is a bit controversial to encourage both competition and collaboration.**
 
 ### Insist on the Highest Standards
+Leaders have relentlessly high standards.
+
+- We should never be satisfied with what we have. Never deliver to requirements.
+- Never accept that something is broken, even though it is acceptable for the customer and others.
+
+### Think big
+- When asked for an idea, don't say the first small idea which pops in your head, and believe you’ve satisfied the requirement.
+- 
+
 
